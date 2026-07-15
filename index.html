@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodExpress Hub - Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">FoodExpress Hub</div>
+      <ul>
+        <li><a href="#inicio">inicio</a></li>
+      </ul>
+    </nav>
+
+    <section id="inicio">
+      <h1>Encuentra los mejores restaurantes</h1>
+      <p>
+        Descubre nuevos productos
+      </p>
+      <a href="#registro" class="btn-cta">¿Buscas que comer?</a>
+    </section>
+
+    <section id="registro">
+      <h2>Únete a FoodExpress</h2>
+      <p>
+        Ingresa tu correo y unete a FoodExpress
+      </p>
+
+      <form class="form-suscripcion" id="form-registro">
+        <input
+          type="email"
+          id="input-correo"
+          placeholder="ejemplo@correo.com"
+          required
+        />
+        <button type="submit">Enviar</button>
+      </form>
+
+      <p id="mensaje-exito">
+        ¡Gracias por unerte! Revisa tu bandeja de entrada.
+      </p>
+    </section>
+
+    <section id="calculadora">
+      <h2>Cotiza tu Servicio</h2>
+      <p>
+        Selecciona lo que tu mascota necesita hoy para calcular el costo
+        estimado.
+      </p>
+
+      <div class="calc-box">
+        <label for="select-servicio">Elige un servicio:</label>
+        <select id="select-servicio">
+          <option value="0">-- Selecciona un producto--</option>
+          <option value="15">Pizza ($15)</option>
+          <option value="30">hamburguesa ($30)</option>
+          <option value="50">Pasta ($50)</option>
+        </select>
+
+        <p>
+          Precio estimado:
+          <span class="precio-display" id="precio-total">$0</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <p>Resolvemos tus dudas al instante.</p>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-pregunta">¿Quiénes pasean estan en la app?</button>
+          <div class="faq-respuesta">
+            <p>
+              restaurantes aprobados y oficales
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-pregunta">¿Qué zonas cubren?</button>
+          <div class="faq-respuesta">
+            <p>
+              Por ahora curimos Lima y Cusco en Perú
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-pregunta">
+            ¿Cómo puedo cancelar un pedido?
+          </button>
+          <div class="faq-respuesta">
+            <p>
+              Llamando al numero de soporte 01-32321321
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
