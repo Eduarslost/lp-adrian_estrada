@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* Historia 2: Desplazamiento suave */
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Menú de Navegación */
+nav {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ff6b6b;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6b6b;
+}
+
+/* Secciones Generales */
+section {
+  padding: 100px 10%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Historia 1: Hero Section */
+#inicio {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://img.magnific.com/foto-gratis/primer-plano-carne-asada-salsa-verduras-patatas-fritas-plato-sobre-mesa_181624-35847.jpg")
+      no-repeat center center/cover;
+  color: white;
+  min-height: 100vh;
+}
+
+#inicio h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#inicio p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.btn-cta {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-cta:hover {
+  background-color: #ff5252;
+}
+
+/* Historia 3: Suscripción */
+#registro {
+  background-color: #ffe3e3;
+}
+
+#registro h2 {
+  margin-bottom: 15px;
+  color: #ff6b6b;
+}
+
+.form-suscripcion {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-suscripcion input[type="email"] {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #ffccd5;
+  border-radius: 25px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form-suscripcion button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#mensaje-exito {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #2b8a3e;
+  display: none; /* Oculto por defecto */
+}
+
+/* Historia 4: Calculadora */
+#calculadora {
+  background-color: #fff;
+}
+
+.calc-box {
+  background-color: #f1f3f5;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.calc-box select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.precio-display {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+/* Historia 5: FAQ Acordeón */
+#faq {
+  background-color: #f1f3f5;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.faq-item {
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.faq-pregunta {
+  background-color: #fff;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.faq-pregunta:hover {
+  background-color: #f8f9fa;
+}
+
+.faq-respuesta {
+  padding: 0 20px;
+  max-height: 0; /* Oculto por defecto usando altura cero */
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease-out,
+    padding 0.3s ease-out;
+  color: #666;
+  background-color: #fafafa;
+}
+
+/* Clase activa para el JS del acordeón */
+.faq-item.activo .faq-respuesta {
+  max-height: 100px; /* Se expande */
+  padding: 15px 20px;
+}
+
+.faq-item.activo .faq-pregunta::after {
+  content: "−";
+}
+
+.faq-pregunta::after {
+  content: "+";
+  font-weight: bold;
+  color: #ff6b6b;
+}
